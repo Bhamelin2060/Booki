@@ -5,3 +5,7 @@
 .fondBleu{
    background-color: cyan;
 }
+p{
+   box-shadow: 6px 6px 6px black;
+   text-shadow: 2px 2px 4px rgb(46, 214, 116);
+}
