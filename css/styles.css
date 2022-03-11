@@ -1,0 +1,1141 @@
+/* Définition de la taille du site*/
+body {
+  max-width: 996px;
+  margin: auto;
+}
+/* Définition de la taille de la page principale*/
+#page {
+  max-width: 992px; /* Largeur maxi de la pag 992 pixels   */
+  margin: 0px; /* Permet de centrer la page dans le navigateur */
+  font-family: "Raleway";
+  margin-left: 15px;
+  margin-right: 15px;
+}
+p {
+  color: black; /* Police paragraphe : couleur noire */
+}
+#page h3 {
+  color: black; /* Police Titre h3 : couleur noire */
+  font-family: "Raleway";
+}
+h1 {
+  font-weight: bold; /* Police Titre principal h1 : couleur noire*/
+}
+/* Harmonisation des balises textes*/
+h3 {
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+
+strong {
+  /* mise en forme fonte en caractère gras */
+  font-weight: bold;
+}
+/* Description du header */
+header {
+  display: flex; /* container de type flex */
+  flex-direction: row; /* Disposition des éléments en ligne*/
+  justify-content: space-between; /* Epacement des 2 éléments principaux espace au centre */
+  align-items: flex-end;
+  flex-wrap: wrap; /* Donne la possobilité aux éléments de revenir à la ligne en cas de largeur de fenetre trop petite */
+}
+
+header span {
+  font-weight: bold; /* Permet une fonte en gras des éléments de navigation*/
+}
+
+#navigation {
+  display: flex; /* Container Navigation qui englobe les liens Hebergement et activité */
+  justify-content: space-around; /* Mise en place d'espacement égaux entre les éléments */
+  align-items: center; /* Alignement des textes */
+  height: 100px;
+  width: 300px;
+  font-weight: bold;
+}
+#navigation Fonte_Grise {
+  color: #929191;
+  /* Réinitiali la couleur de font en noire aprés avoir cliqué sur le lien */
+}
+.bordure_bleue {
+  display: flex;
+  border-bottom: none;
+  border-top: 2px solid #0065fc;
+  color: #0065fc;
+  font-weight: bold;
+  align-items: center; /* Place le texte Hébergement au center du container */
+  height: 100%; /* Initialice le container au maximim de la hauteur de l'ID Navigation*/
+}
+
+.Fonte_Grise {
+  /*permet de conserver la couleur de fonte apres avoir cliquer sr le lien*/
+  color: #929191;
+}
+#Menu_Recherche {
+  display: flex;
+  height: auto;
+  flex-direction: column;
+}
+#Titre p {
+  font-weight: bold;
+  color: #929191;
+}
+.Cont_Ville_Recherche {
+  /* Container de boutons dans le formulaire de recherche */
+  display: flex;
+  width: 300px;
+  border-top: 3px #f2f2f2 solid;
+  border-bottom: 3px #f2f2f2 solid;
+  border-radius: 15px;
+}
+
+.Icone {
+  box-sizing: border-box; /* la taille est idépendante dde celle du contenu */
+  height: 40px;
+  width: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 15px 1px 1px 15px;
+  color: #0065fc; /* #0b021f;  correction par rapport à  */
+  background-color: #f2f2f2;
+
+  text-align: center;
+  border: #77a4e9;
+  cursor: pointer; /* Changement de curseur au passaf de la souris*/
+  font-size: 22px;
+  flex-shrink: 0;
+}
+.Info {
+  /* Container de l'icone Info dan sle container Filtre */
+
+  display: flex;
+  background-color: white;
+  margin: 20px 0px 20px 0px;
+  align-items: center; /* alignement des éléments sur la même ligne*/
+}
+.Info span {
+  font-family: "Raleway";
+  padding: 0px;
+  font-weight: bold;
+  color: #929191;
+}
+.Info p {
+  margin-left: 10px;
+}
+.Icone_Info {
+  box-sizing: content-box;
+  border-radius: 15px;
+  width: 10px;
+  height: 10px;
+  color: #0065fc;
+  padding: 5px;
+  font-size: 10px;
+  text-align: center;
+  border: 2px grey solid;
+}
+
+.icone:hover {
+  /* Changement de la couleur de fond de l'icone  */
+  background-color: #f2f2f2;
+}
+
+.Champs_Ville {
+  border: none; /* supprime la bordure noire du champs input */
+  font-weight: bold;
+  color: black;
+  padding-left: 5px;
+}
+.Bouton_Val_Recherche {
+  color: white;
+  font-family: "Raleway";
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 1px 10px 10px 1px;
+  background-color: #0065fc;
+  cursor: pointer; /* Changement du pointeur de souris lors du survol du bouton*/
+  font-weight: bold;
+  display: inline-block;
+  border: #77a4e9;
+  margin: -3px;
+}
+.Bouton_Val_Recherche:hover {
+  /* Changement d'aspect du bouton de recherche  lors de son survol*/
+
+  background-color: #7adaf1;
+  color: black;
+}
+.Icone_Recherche {
+  display: none;
+}
+#Filtre {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  text-align: start;
+  font-family: "Raleway";
+}
+#Selection-Filter {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: start;
+}
+#Selection-Filter h3 {
+  padding-top: 20px;
+  text-align: center;
+}
+.Bouton_Regroupement {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+.Bouton_Filtre {
+  /* type container des boutons filtre */
+  display: flex;
+  border-radius: 17px 17px 17px 17px;
+  justify-content: flex-start; /*    space-around;*/
+  padding: 0px;
+  color: rgb(32, 17, 17);
+  background-color: white;
+
+  border: 2px #f2f2f2 solid;
+  margin: 20px;
+  flex-direction: row;
+  text-align: center;
+}
+.Bouton_Filtre:hover {
+  background-color: #77a4e9;
+}
+.Icone_Localisation {
+  box-sizing: border-box;
+  width: 31px;
+  border-radius: 15px;
+  color: #0065fc;
+  padding: 10px;
+  font-size: 10px;
+  background-color: #deebff;
+  margin: -2px;
+}
+.Theme {
+  font-family: "Raleway", sans-serif, serif;
+  padding: 5px;
+  font-weight: bold;
+}
+
+/*  ****************************** Container Hebergements *****************************/
+
+#Hebergements {
+  /* Container Hebergements  Marseille + Les plus populaires */
+  display: flex;
+  flex-direction: row;
+  font-family: "Raleway";
+  justify-content: space-between;
+  margin: 0%;
+}
+.Hebergement_a_Marseille {
+  /* Container Hebergement à  Marseille  ( fond gris)  */
+
+  color: black;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 60%;
+  text-decoration-line: none; /* interdit le soulignement d'un texte dans une structure de lien */
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 30px;
+}
+.Titre1 h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 12px;
+  margin-bottom: 12px;
+}
+#Hotels_Marseille {
+  /* ensemble des 6 hotels sélectionnés */
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 1px;
+}
+.Hebergement1 {
+  /* Premier hotel de marseilles */
+
+  /*    border:1px rgb(206, 137, 35) solid; */
+  flex-direction: column;
+  width: 150px;
+  height: auto;
+  background-color: #ffff;
+  border-radius: 10px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  padding: 10px;
+
+  box-shadow: 3px 3px 10px rgb(204, 204, 204);
+}
+.Banniere_Image {
+  /*  Banniere image hotel 1 */
+  height: 70px;
+  width: 100%;
+  /*border:1px rgb(226, 33, 49) solid; */
+  margin-bottom: 0px;
+  border-radius: 10px 10px 1px 1px;
+  object-fit: cover;
+}
+.Hebergement1 h3 {
+  /* mise en forme fonte generale h3 de la description de l'hotel */
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.Hebergement1 p {
+  /* mise en forme fonte gerale h3 de la description de l'holet */
+  font-size: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.Classement {
+  /*  Container des etoile de classement des hotels  ---*/
+
+  display: flex;
+  height: 5px;
+  font-size: 10px;
+}
+.nounderline:link {
+  text-decoration: none; /* interdit le soulignement d'un texte dans une structure de lien des hébergements */
+}
+b {
+  /* couleur par ticulière de l'étoile grise */
+  color: #f2f2f2;
+}
+.Classement {
+  /* couleur particulière de l'étoile de classement */
+  display: flex;
+  color: #0065fc;
+  font-size: 10px;
+  height: 10px;
+  margin-bottom: 2px;
+}
+#Les_plus_populaires {
+  /* Container Hebregement   Les plus populaires */
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: space-between;
+  width: 30%;
+  text-decoration-line: none; /* interdit le soulignement d'un texte dans une structure de lien */
+  background-color: #f2f2f2;
+  border-radius: 30px;
+  padding: 20px;
+}
+.Titre_populaires i {
+  /* couleur générale de l'étoile de classement */
+  color: black;
+}
+.titre_populaire {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+.titre_populaire h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.Populaire {
+  display: flex;
+  flex-direction: row;
+  height: 80px;
+  background-color: #ffff;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 3px;
+  box-shadow: 3px 3px 10px rgb(204, 204, 204);
+}
+.Banniere_Imagepop {
+  /* - Banniere image hotel populaire --*/
+  height: 100%;
+  width: 30%;
+  margin-bottom: 0px;
+  border-radius: 10px 1px 1px 10px;
+  object-fit: cover;
+  flex-shrink: 0; /* Elargi l'image au maximum de son espace d'implantation */
+}
+.Titre_pop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 1px;
+}
+.banniere_description_pop {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 15px;
+}
+.banniere_description_pop h3 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 2px;
+  margin-bottom: 2px;
+}
+.banniere_description_pop p {
+  /* mise en forme fonte generale h3 de la description de l'hotel */
+  font-size: 10px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+.Activité_Marseille {
+  /* ACTIVITE A MARSEILLE */
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-family: "Raleway";
+}
+.lieux_de_visite {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.Cont_Grande_image {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 200px;
+  box-shadow: 3px 3px 0px rgb(204, 204, 204);
+  border-radius: 10px 10px 10px 10px;
+}
+.Cont_Image_Double {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 300px;
+  width: 200px;
+}
+.Cont_Petite_image {
+  display: flex;
+  flex-direction: column;
+  height: 150px;
+  box-shadow: 3px 3px 10px rgb(204, 204, 204);
+  border-radius: 10px 10px 10px 10px;
+}
+.Petite_hauteur {
+  /* Containeur de la petite image des activitées */
+  height: 105px;
+}
+.Ile_Port {
+  display: flex;
+  flex-direction: column;
+}
+.Banniere_Imageact {
+  /* ------------------- Banniere image hotel 1 --------------------------------*/
+  width: 200px;
+  height: 90%;
+  border-radius: 10px 10px 1px 1px;
+  object-fit: cover;
+}
+.Banniere_Imageact2 {
+  /* ------------------- Banniere image hotel 1 --------------------------------*/
+  height: 70%;
+  width: 100%;
+  border-radius: 10px 10px 1px 1px;
+  object-fit: cover;
+}
+.lieux_de_visite h3 {
+  font-size: 12px;
+  font-weight: bold;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  margin-left: 10px;
+}
+/***********************************FOOTER ***************************/
+footer {
+  display: flex;
+  font-family: raleway;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  padding-left: 10px;
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background-color: #f2f2f2;
+}
+footer a {
+  text-decoration: none;
+  color: grey;
+  font-family: "Raleway";
+  margin: 5px 5px 5px 0px;
+}
+.Itemfooter {
+  display: flex;
+  justify-content: flex-start;
+  width: 300px;
+  margin-left: 10px;
+  flex-direction: column;
+  margin-right: 5px;
+}
+/********************Tablettes ****************************************************/
+@media screen and (min-width: 376px) and (max-width: 992px) {
+  body {
+    max-width: 768px;
+  }
+  #page {
+    max-width: 768px;
+    margin-left: 15px;
+    margin-right: 15px;
+    font-family: "Raleway";
+  }
+  .bordure_bleue {
+    border-bottom: 3px solid #0065fc;
+    border-top: none;
+  }
+
+  .Titre1 h2 {
+    font-size: 15px;
+  }
+
+  /* changement de présentation section populaire*/
+  #Hebergements {
+    flex-wrap: wrap;
+  }
+  .Hebergement_a_Marseille {
+    width: 100%;
+  }
+  .Banniere_Image {
+    height: 90px;
+  }
+  
+  #Les_plus_populaires {
+    height: 150px;
+    width: 100%;
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .Hebergement1 {
+    /* Premier hotel de marseilles */
+    width: 30%;
+    height: 85%;
+  }
+  .Hebergement1 h3 {
+    font-size: 8px;
+  }
+  .Hebergement1 p {
+    /* mise en forme fonte gerale h3 de la description de l'holet */
+    font-size: 8px;
+  }
+  .Classement {
+    /* couleur par ticulière de l'étoile bleue */
+    font-size: 6px;
+  }
+
+  .titre_populaire h2 {
+    display: flex;
+    font-size: 15px;
+    text-align: center;
+  }
+  .titre_populaire {
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 15px;
+  }
+  .titre_populaire i {
+    font-size: 45px;
+  }
+  .Populaire {
+    width: 180px;
+    height: 80%;
+  }
+  .Banniere_Imagepop {
+    width: 40%;
+  }
+
+  .banniere_description_pop h3 {
+    font-size: 10px;
+  }
+
+  .banniere_description_pop p {
+    /* mise en forme fonte gerale h3 de la description de l'holet */
+    font-size: 8px;
+  }
+  .Cont_Grande_image {
+    height: 200px;
+    width: 150px;
+  }
+  .Cont_Image_Double {
+    height: 200px;
+    width: 150px;
+  }
+  .Cont_Petite_image {
+    height: 110px;
+  }
+  .Petite_hauteur {
+    height: 80px;
+  }
+  .Banniere_Imageact {
+    /* ---- Banniere image hotel 1 ------*/
+    width: 100%;
+    height: 80%;
+  }
+  .lieux_de_visite h3 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+  }
+  .Itemfooter {
+    width: 200px;
+  }
+}
+/********************************smarphone ****************************************/
+
+@media screen and (max-width: 376px) /* smarphone */ {
+  #body {
+    width: 380px;
+    height: min-content;
+  }
+
+  #page {
+    width: 375px;
+    font-family: "Raleway";
+    margin: 0px;
+  }
+  p {
+    color: black;
+  }
+  #page h3 {
+    color: black;
+  }
+  h1 {
+    /* Titre principale de la page */
+
+    font-weight: bold;
+    font-size: 22px;
+  }
+  /* Harmonisation des balises textes*/
+  h3 {
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  strong {
+    /* mise en forme fonte en caractère gras */
+
+    font-weight: bold;
+  }
+  /*---------- Description du HADER ------------- */
+  header {
+    display: flex; /* container de type flex */
+    flex-direction: column; /* Disposition des éléments en colonne pour smartphone*/
+    justify-content: space-between; /* Epacement des 2 éléments principaux espace au centre */
+    align-items: center;
+  }
+
+  header img {
+    /* Initialisationde la taille du logo version smartphone*/
+    width: 65px; /* taille initiale 130 */
+    height: 45px; /* taille initiale 90 */
+  }
+  #navigation {
+    width: 100%;
+    height: 40px; /*la hauteur du container nav  à une hauteur de 100 pixels */
+  }
+  nav {
+    display: flex; /* disposition des elements les un à coté des autres (en ligne) */
+    /*  align-items:center;                     : les éléments sont au centre */
+
+    width: 100%;
+  }
+
+  nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 100%;
+    border-bottom: 2px solid #deebff;
+  }
+  .bordure_bleue {
+    border-bottom: 2px solid #0065fc; /* mise en pce de la bordure en bas du container pour le cas  */
+    color: #0065fc;
+    border-top: none;
+  }
+
+  .Theme2                                 /* mise en couleu gris de la fonte      */ {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    border-bottom: 2px solid #f2f2f2;
+    font-family: "Raleway";
+    padding-bottom: 10px;
+    font-weight: bold;
+    color: #929191;
+  }
+  .Theme2 :visited {
+    /*permet de conserver la couleur de fonte apres avoie cliquer sr le lien*/
+    color: #929191;
+  }
+  #Menu_Recherche {
+    display: flex;
+    height: auto;
+    margin-left: 20px;
+    margin-right: 20px;
+    /*  background-color: #d4e3f8;*/
+  }
+  #Titre p {
+    font-weight: normal;
+    color: #929191;
+    margin: 10px 0px 10px 0px;
+  }
+
+  .Cont_Ville_Recherche {
+    display: flex;
+    position: relative; /* Place le container Formulaire en position relative pour préparer le bouton Icone_recherche */
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .Icone {
+    box-sizing: border-box; /* ligne de test boxsizing*/
+    width: 40px;
+    height: 40px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 15px 1px 1px 15px;
+    color: #0b021f;
+    text-align: center;
+    border: #77a4e9;
+    cursor: pointer;
+    font-size: 22px;
+    background-color: #f2f2f2;
+  }
+  .icone:hover {
+    background-color: #f2f2f2;
+  }
+
+  .Icone_Recherche {
+    /* Icone recherche dans le formulaire */
+    box-sizing: border-box; /* ligne de test boxsizing*/
+    position: absolute; /* Place bouton Icone_Recherche en position absolue par rapport formulaire  */
+    color: white;
+    padding: 14px;
+    border-radius: 10px 10px 10px 10px;
+    background-color: #0065fc;
+    border: none;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    right: 0; /* Place bouton Icone_Recherche en position extreme droite du formulaire*/
+  }
+
+  .Bouton_Val_Recherche {
+    display: none;
+  }
+  /* Section FILTRE */
+  #Filtre {
+    display: flex;
+    flex: 1;
+    flex-direction: column; /* mode Smartphone la section filtre passe en flex colonne */
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  #Selection-Filter {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: space-around;
+  }
+  #Selection-Filter h3 {
+    padding-top: 20px;
+    text-align: start;
+  }
+  .Bouton_Filtre {
+    /* type container des bouton filtre */
+    display: flex;
+    height: 40px;
+    border-radius: 20px 20px 20px 20px;
+    padding: 0px;
+    color: rgb(32, 17, 17);
+    background-color: white;
+    width: max-content;
+    border: 2px #f2f2f2 solid;
+    margin: 6px 0px 6px 0px;
+    flex-direction: row;
+  }
+  .Bouton_Filtre:hover {
+    background-color: #77a4e9;
+  }
+  .Selection-Filter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .Bouton_Regroupement {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    text-align: center;
+  }
+  .Icone_Localisation {
+    box-sizing: border-box;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    color: #0065fc;
+
+    font-size: 15px;
+    background-color: #deebff;
+
+    text-align: center;
+  }
+  .Info {
+    display: flex;
+    background-color: white;
+    margin: 20px 20px 20px 0px;
+    align-items: flex-start;
+  }
+  .Info span {
+    font-family: "Raleway";
+    padding: 0px;
+    font-weight: normal;
+    color: black;
+    font-style: normal;
+  }
+  .Info p {
+    margin-top: 0px;
+    margin-left: 10px;
+    font-size: 13px;
+  }
+  .Icone_Info {
+    box-sizing: border-box;
+    width: 22px;
+    height: 20px;
+    border-radius: 15px;
+    border: 2px #f2f2f2 solid;
+    font-size: 10px;
+    color: #0065fc;
+    padding: 5px;
+    padding-top: 2px;
+    font-size: 10px;
+    text-align: center;
+  }
+
+  .Theme {
+    font-family: "Raleway", sans-serif, serif;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    text-align: center;
+  }
+
+  /*  ****************************** Container Hebergements *****************************/
+
+  #Hebergements {
+    /* Container Hebergements  Marseille + Les plus populaires */
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    font-family: "Raleway";
+    justify-content: space-around;
+    margin: 0%;
+    border-radius: 0px;
+  }
+
+  .Hebergement_a_Marseille:nth-child(1) {
+    order: 2;
+  }
+  .Les_plus_populairest:nth-child(2) {
+    order: 1;
+  }
+  .Hebergement_a_Marseille {
+    /* Container Hebergement à  Marseille  ( fond gris)  */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 170px;
+    /*height:550px;*/
+    text-decoration-line: none; /* interdit le soulignement d'un texte dans une structure de lien */
+    /*border:2px rgb(49, 228, 144) solid;*/
+
+    background-color: white;
+
+    padding: 20px;
+  }
+
+  .Titre1 h2 {
+    font-size: 20px; /* augmentation de la taille de fonte de 15 à 30 px* mode smartphone*/
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+
+  #Hotels_Marseille {
+    /* ensemble des 6 hotels sélectionnés */
+    padding: 1px;
+    max-width: 100%;
+  }
+
+  .Hebergement1 {
+    /* Premier hotel de marseilles smartphone  */
+
+    flex-direction: column;
+    width: 100%; /* Elargi le container image à 100% du containeur  hotle à marseille*/
+    height: auto;
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    padding: 5px;
+
+    box-shadow: 3px 3px 10px rgb(204, 204, 204);
+  }
+  .Hebergement1 h3 {
+    font-size: 20px;
+    margin-left: 5px;
+  }
+  .Hebergement1 p {
+    /* mise en forme fonte gerale h3 de la description de l'holet */
+    font-size: 8px;
+  }
+
+  .Populaire {
+    display: flex;
+    flex-direction: row; /*  cas smartphone */
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 10px 10px;
+    height: 120px;
+  }
+
+  .Banniere_Image {
+    /* ------------------- Banniere image hotel 1 --------------------------------*/
+    height: 120px;
+    width: 100%;
+    /* border:1px rgb(226, 33, 49) solid;   bour debug*/
+    margin-bottom: 0px;
+    border-radius: 10px 10px 1px 1px;
+    object-fit: cover;
+  }
+
+  .Hebergment1 h3 {
+    /* mise en forme fonte generale h3 de la description de l'hotel */
+    font-size: 15px; /* Changement de la taille des fonte en mode smartphones passe de 8 à 16 */
+    font-weight: bold;
+    padding-left: 5px;
+  }
+  .Hebergement1 p {
+    /* mise en forme fonte gerale h3 de la description de l'holet */
+    font-size: 15px; /* Changement de la taille des fonte en mode smartphones passe de 8 à 16 */
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding-left: 5px;
+  }
+
+  b {
+    /* couleur particulière de l'étoile grise */
+    color: #f2f2f2;
+  }
+
+  .Classement {
+    /* couleur particulière de l'étoile bleue */
+    display: flex;
+
+    color: #0065fc;
+    font-size: 12px; /* changement taille caractère des étoiles  passe de 6 à 12*/
+    padding-left: 5px;
+    margin-bottom: 8px;
+    margin-top: 8px;
+  }
+
+  #Les_plus_populaires {
+    /* Container Hebregement   Les plus populaires */
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+
+    text-decoration-line: none; /* interdit le soulignement d'un texte dans une structure de lien */
+
+    border-radius: 0px;
+    background-color: #f2f2f2;
+
+    padding: 20px;
+  }
+
+  .titre_populaire {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .titre_populaire i {
+    color: black;
+    font-size: 20px;
+  }
+  .titre_populaire h2 {
+    font-size: 20px; /* augmentation de la talliede fonte de 15 à 30 px*/
+    font-weight: bold;
+    margin-top: 4px;
+    margin-bottom: 10px;
+  }
+
+  .Populaire {
+    display: flex;
+    flex-direction: row; /*  cas smartphone */
+    background-color: #ffff;
+    border-radius: 10px;
+    padding: 5px;
+    margin-bottom: 10px;
+    border-radius: 10px 10px 10px 10px;
+    height: 130px;
+  }
+  .Banniere_Imagepop        /* ------------------- Banniere image hotel populaire --------------------------------*/ {
+    /*  height:130px;      cas smartphone */
+    width: 120px; /* cas smartphone */
+    border-radius: 10px 1px 1px 10px;
+    object-fit: cover;
+    flex-shrink: 0; /* Elargi l'image au maximum de son espace d'implantation */
+  }
+  .Titre_pop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 1px;
+  }
+  .banniere_description_pop {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-left: 15px;
+    padding-right: 5px;
+  }
+  .banniere_description_pop h3 {
+    font-size: 20px; /* changement de la taille font size h3 passe de 10 à 20 */
+    font-weight: bold;
+    margin-top: 2px;
+    margin-bottom: 2px;
+  }
+
+  .banniere_description_pop p    /* mise en forme fonte gerale h3 de la description de l'holet */ {
+    font-size: 15px; /* changement de la taille font size h3 passe de 10 à 20 */
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+
+  .Activité_Marseille                                /* ACTIVITE A MARSEILLE */ {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: space-between;
+    width: 100%;
+    min-width: 170px;
+    /*height:550px;*/
+    text-decoration-line: none; /* interdit le soulignement d'un texte dans une structure de lien */
+    /*border:2px rgb(49, 228, 144) solid;*/
+
+    background-color: white;
+
+    padding: 20px;
+  }
+
+  .lieux_de_visite {
+    display: flex;
+    flex-direction: column; /*row; en mode desktop*/
+    justify-content: space-between;
+    width: 100%;
+  }
+  .Cont_Grande_image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 180px;
+    box-shadow: 3px 3px 10px rgb(204, 204, 204);
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .Cont_Image_Double {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 420px;
+    border-radius: 20px;
+  }
+  .Cont_Petite_image {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 180px;
+    box-shadow: 3px 3px 10px rgb(204, 204, 204);
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  .Petite_hauteur {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 180px;
+    box-shadow: 3px 3px 10px rgb(204, 204, 204);
+    border-radius: 20px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .Ile_Port {
+    display: flex;
+    flex-direction: column;
+  }
+  .Banniere_Imageact        /* ------------------- Banniere image hotel 1 --------------------------------*/ {
+    width: 100%;
+    height: 130px;
+    border-radius: 10px 10px 1px 1px;
+    object-fit: cover;
+  }
+  .Banniere_Imageact2        /* ------------------- Banniere image hotel 1 --------------------------------*/ {
+    width: 100%;
+    /*border:1px rgb(226, 33, 49) solid;*/
+    height: 130px;
+    border-radius: 10px 10px 1px 1px;
+    object-fit: cover;
+  }
+
+  .lieux_de_visite h3 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 10px;
+  }
+
+  /***********************************FOOTER ***************************/
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .Itemfooter {
+    margin-bottom: 20px;
+  }
+  .Itemfooter h3 {
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+}
